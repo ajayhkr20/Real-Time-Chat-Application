@@ -26,7 +26,15 @@ SECRET_KEY = 'django-insecure-41nzz4f8-z1qb1!8=63&1+uri7(65t@yi%a)imol@=j7r&wdji
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    "real-time-chat-27eq.onrender.com",
+    "127.0.0.1",
+    "localhost",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://real-time-chat-27eq.onrender.com",
+]
 
 # Application definition
 
