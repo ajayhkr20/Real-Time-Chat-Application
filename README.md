@@ -22,6 +22,8 @@ Test Credentials
 Role	Email	Password
 Test User	ajay@gmail.com
 	Ajay@123
+Test User	test@gmail.com
+	Test@123
 Test User	demo@gmail.com
 	Demo@123
 Admin	admin@gmail.com
@@ -43,7 +45,8 @@ Setup & Installation
 
 Clone the repository
 
-git clone https://github.com/ajayhkr20/Real-Time-Individual-Chat-Application.git
+git clone https://github.com/ajayhkr20/Real-Time-Chat-Application.git
+  
 cd Real-Time-Individual-Chat-Application
 
 Create and activate a virtual environment
@@ -51,6 +54,7 @@ Create and activate a virtual environment
 python -m venv .env
 # On Windows
 .env\Scripts\activate
+
 # On macOS/Linux
 source .env/bin/activate
 
