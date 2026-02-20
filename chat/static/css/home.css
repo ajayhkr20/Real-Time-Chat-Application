@@ -1,0 +1,53 @@
+*{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    .nav{
+        background-color: aquamarine;
+    }
+    ul{
+        display: flex;
+        padding: 12px;
+    }
+    li{
+        padding: 10px;
+        list-style-type: none;
+        margin-left: 80px;
+    }
+    a{
+        text-decoration: none;
+        font-weight: bolder;
+    }
+    .chat{
+        color: red;
+        font-weight: bold;
+
+    }
+    li:hover{
+        background-color: azure;
+    }
+
+    /* Animated header container */
+    .ani h1 {
+        font-size: 5rem;
+        color: #ca0aad;
+        text-transform: uppercase;
+        text-align: center;
+        animation: glow 2s ease-in-out infinite alternate, float 3s ease-in-out infinite;
+    }
+
+    /* Glowing text animation */
+    @keyframes glow {
+        0% { text-shadow: 0 0 10px #e01c19, 0 0 20px #2014cd, 0 0 30px #19844d; }
+        50% { text-shadow: 0 0 30px #696d6d, 0 0 50px #161919, 0 0 70px #00ffe0; }
+        100% { text-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0, 0 0 30px #031614; }
+    }
+
+    /* Floating up and down animation */
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0px); }
+    }

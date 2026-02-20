@@ -1,0 +1,27 @@
+{% extends "chat/base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+    <link rel="stylesheet" href="/static/css/user.css">
+</head>
+<body>
+    <br><br>
+
+    <h2 style="text-align: center;">User List</h2>
+    <div class="user-list">
+        {% for user in users %}
+            <div class="user-item" onclick="window.location.href='{% url 'chat_room' user.id %}'">
+                <span>{{ user.username }}</span>
+                <span class="online-dot"></span>
+            </div>
+        {% endfor %}
+</div>
+</body>
+</html>
+
+
+{% endblock %}

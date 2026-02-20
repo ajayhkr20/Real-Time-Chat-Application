@@ -1,0 +1,62 @@
+ .register-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        background: #f4f6f9;
+    }
+
+    .register-box {
+        background: #ffffff;
+        padding: 25px;
+        width: 350px;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .register-box h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    form p {
+        margin-bottom: 15px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    input:focus {
+        border-color: #4CAF50;
+        outline: none;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #43a047;
+    }
+
+    /* Hide password instructions */
+    .helptext {
+        display: none;
+    }
+
+    ul.errorlist {
+        color: red;
+        list-style: none;
+        padding: 0;
+        font-size: 13px;
+    }

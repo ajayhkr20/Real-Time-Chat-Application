@@ -1,0 +1,28 @@
+.user-list {
+    max-width: 400px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f8f9fa;
+    padding: 10px;
+}
+.user-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-item:last-child {
+    border-bottom: none;
+}
+.user-item:hover {
+    background: #e2e6ea;
+}
+.online-dot {
+    width: 10px;
+    height: 10px;
+    background: green;
+    border-radius: 50%;
+}

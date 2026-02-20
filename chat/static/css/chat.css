@@ -1,0 +1,25 @@
+#chat-box {
+    height: 420px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #f8f9fa;
+}
+.message {
+    margin: 6px 0;
+    padding: 8px 12px;
+    border-radius: 10px;
+    max-width: 70%;
+    display: inline-block;
+    word-wrap: break-word;
+}
+.sent { background: #d1e7dd; float: right; clear: both; }
+.received { background: #ffffff; float: left; clear: both; }
+.tick { font-size: 12px; color: gray; margin-left: 5px; }
+.btn-delete { font-size: 0.8rem; padding: 2px 6px; margin-left: 5px; }
+.input-group { margin-top: 10px; }
+
+.btn-delete i {
+    margin-left: 5px;
+    font-size: 14px;
+}
