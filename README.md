@@ -21,10 +21,10 @@ Online/offline status indicators
 Test Credentials
 Role	Email	Password
 Test User	ajay@gmail.com
-	Ajay@123
+	Ajay@1234
 Test User	test@gmail.com
-	Test@123
-Test User	demo@gmail.com
+	Test@1234
+superuser	demo@gmail.com
 	Demo@123
 Admin	admin@gmail.com
 	Admin@123
