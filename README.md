@@ -66,6 +66,10 @@ python manage.py migrate
 Collect static files
 
 python manage.py collectstatic
+pip install django
+pip install channels
+pip install daphne
+pip install whitenoise
 
 Running the Project
 1. Development Server (HTTP)
