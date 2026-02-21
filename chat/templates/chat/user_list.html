@@ -14,11 +14,16 @@
     <h2 style="text-align: center;">User List</h2>
     <div class="user-list">
         {% for user in users %}
-            <div class="user-item" onclick="window.location.href='{% url 'chat_room' user.id %}'">
-                <span>{{ user.username }}</span>
-                <span class="online-dot"></span>
-            </div>
-        {% endfor %}
+        <div class="user-item" onclick="window.location.href='{% url 'chat_room' user.id %}'">
+            <span>{{ user.username }}</span>
+            {% if user.is_superuser %}
+                <span style="color: red; font-weight: bold;">(Admin)</span>
+            {% endif %}
+            <span class="online-dot {% if user.is_online %}online{% endif %}"></span>
+        </div>
+    {% empty %}
+        <p>No users found.</p>
+    {% endfor %}
 </div>
 </body>
 </html>

@@ -57,7 +57,7 @@ def user_logout(request):
 
 @login_required
 def user_list(request):
-    users = User.objects.exclude(id=request.user.id)
+    users = User.objects.exclude(id=request.user.id).exclude(is_superuser=True)
     return render(request, "chat/user_list.html", {"users": users})
 
 
