@@ -1,0 +1,57 @@
+.pf-page {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px; position: relative; overflow: hidden;
+}
+.pf-blob {
+  position: fixed; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 50% at 20% 10%, rgba(108,92,231,.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 80% 85%, rgba(0,206,201,.07) 0%, transparent 55%);
+}
+.pf-card {
+  position: relative; z-index: 1;
+  width: 100%; max-width: 500px;
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 20px; padding: 32px;
+  box-shadow: 0 24px 72px rgba(0,0,0,.5);
+  animation: fadeUp .36s ease;
+}
+.pf-nav {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 24px;
+}
+.pf-back, .pf-logout { font-size: 13px; padding: 7px 14px; }
+.pf-title {
+  font-family: var(--serif); font-size: 27px; font-weight: 400;
+  letter-spacing: -.025em; margin-bottom: 6px;
+}
+.pf-hint { font-size: 14px; color: var(--txt2); margin-bottom: 24px; }
+
+/* Avatar */
+.pf-av-wrap {
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  margin-bottom: 28px;
+}
+.pf-av {
+  width: 100px; height: 100px; border-radius: 50%;
+  border: 2px dashed var(--border2);
+  cursor: pointer; position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--surface2); transition: var(--trans);
+}
+.pf-av:hover { border-color: var(--accent); }
+.pf-av img { width: 100%; height: 100%; object-fit: cover; }
+.pf-initials { font-size: 32px; font-weight: 600; color: var(--accent2); }
+.pf-av-hover {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,.55);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; opacity: 0; transition: opacity .18s;
+}
+.pf-av:hover .pf-av-hover { opacity: 1; }
+.pf-pick { font-size: 13px; padding: 7px 16px; }
+
+.pf-form { display: flex; flex-direction: column; gap: 16px; }
+.pf-bio  { resize: vertical; min-height: 80px; }
+.pf-save { width: 100%; padding: 13px; font-size: 15px; margin-top: 4px; }
