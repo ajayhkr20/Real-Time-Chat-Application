@@ -51,11 +51,12 @@ TEMPLATES = [{
 ASGI_APPLICATION = 'chatproject.asgi.application'
 WSGI_APPLICATION = 'chatproject.wsgi.application'
 
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    "default": dj_database_url.parse(
+        os.getenv("DATABASE_URL")
+    )
 }
 
 # In-memory channel layer (switch to Redis for production)
