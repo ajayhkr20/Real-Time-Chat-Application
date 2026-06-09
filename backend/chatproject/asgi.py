@@ -1,10 +1,11 @@
 import os
 import django
+
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'chatproject.settings')
 django.setup()
 
 from django.core.asgi import get_asgi_application
-from channels.routing import ProtocolTypeRouter, URLRou
+from channels.routing import ProtocolTypeRouter, URLRouter  # fix: URLRouter was missing import
 
 import chat.routing
 from chat.middleware import JWTAuthMiddleware
