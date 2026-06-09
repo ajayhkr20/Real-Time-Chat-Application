@@ -53,15 +53,20 @@ TEMPLATES = [{
 ASGI_APPLICATION = 'chatproject.asgi.application'
 WSGI_APPLICATION = 'chatproject.wsgi.application'
 
+import os
 import dj_database_url
 
-DATABASES = {
-    "default": dj_database_url.config(
-        default="sqlite:///db.sqlite3",
-        conn_max_age=600,
-        ssl_require=False,
-    )
-}
+if os.environ.get("DATABASE_URL"):
+    DATABASES = {
+        "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    }
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
 
 # Use InMemoryChannelLayer for free tier (no Redis needed)
 # For production with multiple workers, switch to Redis channel layer
