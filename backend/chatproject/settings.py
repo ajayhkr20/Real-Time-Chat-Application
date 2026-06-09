@@ -11,7 +11,7 @@ ALLOWED_HOSTS = ['*']
 
 
 # Replace CORS_ALLOW_ALL_ORIGINS with specific origin
-CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     "https://chat-frontend.onrender.com",
 ]
@@ -97,9 +97,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
-# Media files (avatar uploads) — on Render free tier, uploads don't persist
-# For production, use Cloudinary or S3
+STORAGES = {
+    "default": {
+        "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
+    },
+}
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
